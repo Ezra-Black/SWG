@@ -10,15 +10,17 @@ import UIKit
 
 class PlanetsTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var planetNameLabel: UILabel!
+    
+    var planet: Planet? {
+        didSet {
+            updateViews()
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    private func updateViews() {
+        guard let planet = planet else { return }
+        
+        planetNameLabel.text = planet.name
     }
-
 }

@@ -53,6 +53,7 @@ class PersonController {
                 print("Unable to decode data into object of type [Person]: \(error)")
             }
             completion()
+            print(data)
         }.resume()
     }
 }

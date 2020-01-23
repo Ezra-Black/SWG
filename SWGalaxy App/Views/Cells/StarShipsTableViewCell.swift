@@ -9,16 +9,19 @@
 import UIKit
 
 class StarShipsTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var starshipNameLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var starship: Starship? {
+        didSet {
+            updateViews()
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    private func updateViews() {
+        guard let starship = starship else { return }
+        
+        starshipNameLabel.text = starship.name
     }
 
 }

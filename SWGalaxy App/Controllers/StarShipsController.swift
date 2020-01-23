@@ -20,10 +20,10 @@ class StarshipsController {
     
     //MARK: Networking Method Call
     
-    func searchForSpeciesWith(searchTerm: String, completion: @escaping () -> Void) {
+    func searchForStarShipsWith(searchTerm: String, completion: @escaping () -> Void) {
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
-        let searchTermQUeryItem = URLQueryItem(name: "search", value: searchTerm)
-        urlComponents?.queryItems = [searchTermQUeryItem]
+        let searchTermQueryItem = URLQueryItem(name: "search", value: searchTerm)
+        urlComponents?.queryItems = [searchTermQueryItem]
         
         guard let requestURL = urlComponents?.url else {
             print("request URL is nil")

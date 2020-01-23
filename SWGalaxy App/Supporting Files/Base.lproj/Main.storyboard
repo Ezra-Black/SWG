@@ -39,13 +39,30 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PeopleCell" id="PCy-cB-QQt">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="PeopleCell" id="PCy-cB-QQt" customClass="PersonTableViewCell" customModule="SWGalaxy_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="64.333335876464844"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PCy-cB-QQt" id="zcb-gc-ccj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="351" height="64.333335876464844"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i58-Ck-7U4">
+                                            <rect key="frame" x="20" y="20" width="311" height="24.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="i58-Ck-7U4" secondAttribute="bottom" constant="20" symbolic="YES" id="7jO-MY-DSo"/>
+                                        <constraint firstItem="i58-Ck-7U4" firstAttribute="leading" secondItem="zcb-gc-ccj" secondAttribute="leading" constant="20" symbolic="YES" id="7nx-uk-zbe"/>
+                                        <constraint firstAttribute="trailing" secondItem="i58-Ck-7U4" secondAttribute="trailing" constant="20" symbolic="YES" id="Kbj-lg-HR7"/>
+                                        <constraint firstItem="i58-Ck-7U4" firstAttribute="top" secondItem="zcb-gc-ccj" secondAttribute="top" constant="20" symbolic="YES" id="M0W-eN-1pQ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="personNameLabel" destination="i58-Ck-7U4" id="Smm-1b-ev8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -62,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPy-9r-sc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="55"/>
+            <point key="canvasLocation" x="2047.826086956522" y="54.619565217391312"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MBd-PG-c76">
@@ -97,7 +114,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="tHg-c7-wRA" kind="relationship" relationship="rootViewController" id="EZP-qT-EVq"/>
+                        <segue destination="QqB-ht-xIz" kind="relationship" relationship="rootViewController" id="xHH-k6-qoe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rog-uT-XIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -105,40 +122,61 @@
             <point key="canvasLocation" x="1064" y="884"/>
         </scene>
         <!--Starships-->
-        <scene sceneID="AV4-fb-Iwn">
+        <scene sceneID="Pe4-m9-R12">
             <objects>
-                <tableViewController id="tHg-c7-wRA" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QfZ-Tk-VV9">
+                <tableViewController id="QqB-ht-xIz" customClass="StarShipsTableViewController" customModule="SWGalaxy_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dza-zR-xeZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="d7u-yh-AHg">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Gw7-Lm-RRE">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StarshipCell" id="XqX-ov-ewF">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="starshipCell" id="1K6-WF-saJ" customClass="StarShipsTableViewCell" customModule="SWGalaxy_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XqX-ov-ewF" id="uDJ-ZQ-DI5">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1K6-WF-saJ" id="XyW-Sr-EFm">
+                                    <rect key="frame" x="0.0" y="0.0" width="351" height="73"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fh-66-O66" userLabel="Name:">
+                                            <rect key="frame" x="20" y="20" width="311" height="33"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32.670000000000002" id="Nn9-lS-8Nh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="27"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4Fh-66-O66" firstAttribute="top" secondItem="XyW-Sr-EFm" secondAttribute="top" constant="20" symbolic="YES" id="9dv-f6-X9m"/>
+                                        <constraint firstAttribute="trailing" secondItem="4Fh-66-O66" secondAttribute="trailing" constant="20" symbolic="YES" id="LmJ-nP-uTr"/>
+                                        <constraint firstItem="4Fh-66-O66" firstAttribute="leading" secondItem="XyW-Sr-EFm" secondAttribute="leading" constant="20" symbolic="YES" id="gry-xm-0d6"/>
+                                        <constraint firstAttribute="bottom" secondItem="4Fh-66-O66" secondAttribute="bottom" constant="20" symbolic="YES" id="jnH-Ns-hs0"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="starshipNameLabel" destination="4Fh-66-O66" id="PGA-zG-qt9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="tHg-c7-wRA" id="odJ-pV-rpd"/>
-                            <outlet property="delegate" destination="tHg-c7-wRA" id="jNn-tx-fvP"/>
+                            <outlet property="dataSource" destination="QqB-ht-xIz" id="KYU-uY-UaK"/>
+                            <outlet property="delegate" destination="QqB-ht-xIz" id="fvw-ZD-oD6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Starships" id="w9Z-Td-Tp7">
-                        <barButtonItem key="rightBarButtonItem" title="Clear List" id="svC-Y1-fZ5"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Starships" id="l2O-zF-qeI"/>
+                    <connections>
+                        <outlet property="starshipSearchBar" destination="Gw7-Lm-RRE" id="9a5-fa-8wq"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bg0-x4-X95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4IS-aY-SJ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="884"/>
+            <point key="canvasLocation" x="2048" y="884"/>
         </scene>
         <!--Species-->
         <scene sceneID="9NR-Gx-j35">
@@ -151,49 +189,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="UKc-8X-FJd" kind="relationship" relationship="rootViewController" id="0W4-Ij-Rm7"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dUN-WZ-WCJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1064" y="1727"/>
-        </scene>
-        <!--Species-->
-        <scene sceneID="N0m-tq-jO4">
-            <objects>
-                <tableViewController id="UKc-8X-FJd" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QZV-fo-PM9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="obv-VV-ZSp">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpeciesCell" id="cjR-6d-WuZ">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cjR-6d-WuZ" id="BF2-7C-br8">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="UKc-8X-FJd" id="ZrC-ts-Alt"/>
-                            <outlet property="delegate" destination="UKc-8X-FJd" id="W8v-XU-uTN"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Species" id="KjR-Ta-KX8">
-                        <barButtonItem key="rightBarButtonItem" title="Clear List" id="sD3-vd-sW9"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ypd-zH-YDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1974" y="1727"/>
         </scene>
         <!--Planets-->
         <scene sceneID="L1P-tg-kKC">
@@ -206,49 +205,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="RIw-03-X3Y" kind="relationship" relationship="rootViewController" id="bEN-1d-SDr"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zg5-rU-3av" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1064" y="2547"/>
-        </scene>
-        <!--Planets-->
-        <scene sceneID="910-z0-LZN">
-            <objects>
-                <tableViewController id="RIw-03-X3Y" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="91W-rk-EQ2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="j7K-zb-aRi">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanetsCell" id="Utz-ny-Gb8">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Utz-ny-Gb8" id="b0w-l1-k8o">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="RIw-03-X3Y" id="436-tb-q0q"/>
-                            <outlet property="delegate" destination="RIw-03-X3Y" id="D4T-TI-gCe"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Planets" id="uRY-Qm-9sq">
-                        <barButtonItem key="rightBarButtonItem" title="Clear List" id="WEV-Zb-jQF"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ja-WE-Bv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1974" y="2547"/>
         </scene>
     </scenes>
 </document>

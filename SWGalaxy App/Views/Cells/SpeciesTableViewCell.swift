@@ -10,15 +10,17 @@ import UIKit
 
 class SpeciesTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var speciesNameLabel: UILabel!
+    
+    var species: Species? {
+        didSet {
+            updateViews()
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    private func updateViews() {
+        guard let species = species else { return }
+        
+        speciesNameLabel.text = species.name
     }
-
 }

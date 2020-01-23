@@ -36,7 +36,7 @@ class PersonSearchTableViewController: UITableViewController {
        
        
        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           guard let cell = tableView.dequeueReusableCell(withIdentifier: "PeropleCell", for: indexPath) as? PersonTableViewCell else { return UITableViewCell() }
+           guard let cell = tableView.dequeueReusableCell(withIdentifier: "PeopleCell", for: indexPath) as? PersonTableViewCell else { return UITableViewCell() }
            
            let person = personController.people[indexPath.row]
            cell.person = person

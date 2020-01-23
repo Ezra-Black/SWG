@@ -135,6 +135,7 @@
 		83B45A9D23D930D6002BFF42 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83B45AC123D97627002BFF42 /* Fonts */,
 				83B45A8623D93075002BFF42 /* AppDelegate.swift */,
 				83B45A8823D93075002BFF42 /* SceneDelegate.swift */,
 				83B45A8C23D93075002BFF42 /* Main.storyboard */,
@@ -154,6 +155,13 @@
 				83B45AB523D9629F002BFF42 /* PlanetsTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		83B45AC123D97627002BFF42 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
