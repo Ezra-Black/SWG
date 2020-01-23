@@ -1,5 +1,5 @@
 //
-//  StarShipsController.swift
+//  SpeciesController.swift
 //  SWGalaxy App
 //
 //  Created by Joseph Rogers on 1/22/20.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-class StarshipsController {
+class SpeciesController {
     
     //MARK: Properties
     
-    var starships: [Starship] = []
+    var species: [Species] = []
     
     //MARK: Networking
     
-    let baseURL = URL(string:  "https://swapi.co/api/starships")!
+    let baseURL = URL(string:  "https://swapi.co/api/species")!
     
     //MARK: Networking Method Call
     
@@ -47,10 +47,10 @@ class StarshipsController {
             let jsonDecoder = JSONDecoder()
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
             do {
-                let starshipsSearch = try jsonDecoder.decode(StarshipSearch.self, from: data)
-                self.starships.append(contentsOf: starshipsSearch.results)
+                let speciesSearch = try jsonDecoder.decode(SpeciesSearch.self, from: data)
+                self.species.append(contentsOf: speciesSearch.results)
             } catch {
-                print("Unable to decode data into object of type [Starships]: \(error)")
+                print("Unable to decode data into object of type [Species]: \(error)")
             }
             
         }

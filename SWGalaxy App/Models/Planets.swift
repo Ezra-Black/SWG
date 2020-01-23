@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Planets: Codable {
+struct Planet: Codable {
     let name: String
     let population: String
     let climate: String
@@ -16,5 +16,5 @@ struct Planets: Codable {
 }
 
 struct PlanetsSearch: Codable {
-    let reaults: [Planets]
+    let results: [Planet]
 }
