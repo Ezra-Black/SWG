@@ -38,7 +38,7 @@ class StarShipsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       guard let cell = tableView.dequeueReusableCell(withIdentifier: "StarShipsCell", for: indexPath) as? StarShipsTableViewCell else { return UITableViewCell()}
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: "StarShipCell", for: indexPath) as? StarShipsTableViewCell else { return UITableViewCell()}
 
         let starship = starShipController.starships[indexPath.row]
         cell.starship = starship
