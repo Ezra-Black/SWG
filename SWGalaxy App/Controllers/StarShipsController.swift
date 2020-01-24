@@ -51,7 +51,6 @@ class StarshipsController {
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
             do {
                 let starshipsSearch = try jsonDecoder.decode(StarshipSearch.self, from: data)
-                print(data)
                 self.starships.append(contentsOf: starshipsSearch.results)
                 print(starshipsSearch.results)
             } catch {

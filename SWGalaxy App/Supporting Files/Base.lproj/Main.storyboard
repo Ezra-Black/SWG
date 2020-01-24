@@ -40,14 +40,14 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="PeopleCell" id="PCy-cB-QQt" customClass="PersonTableViewCell" customModule="SWGalaxy_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="60.666667938232422"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PCy-cB-QQt" id="zcb-gc-ccj">
-                                    <rect key="frame" x="0.0" y="0.0" width="351" height="60.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="351" height="61"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i58-Ck-7U4">
-                                            <rect key="frame" x="20" y="20" width="311" height="20.666666666666671"/>
+                                            <rect key="frame" x="20" y="20" width="311" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -136,28 +136,20 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="StarShipCell" id="1K6-WF-saJ" customClass="StarShipsTableViewCell" customModule="SWGalaxy_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="73"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1K6-WF-saJ" id="XyW-Sr-EFm">
-                                    <rect key="frame" x="0.0" y="0.0" width="351" height="73"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="351" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fh-66-O66" userLabel="Name:">
-                                            <rect key="frame" x="20" y="20" width="311" height="33"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="32.670000000000002" id="Nn9-lS-8Nh"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fh-66-O66" userLabel="Name:">
+                                            <rect key="frame" x="20" y="11.000000000000002" width="311" height="20.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="4Fh-66-O66" firstAttribute="top" secondItem="XyW-Sr-EFm" secondAttribute="top" constant="20" symbolic="YES" id="9dv-f6-X9m"/>
-                                        <constraint firstAttribute="trailing" secondItem="4Fh-66-O66" secondAttribute="trailing" constant="20" symbolic="YES" id="LmJ-nP-uTr"/>
-                                        <constraint firstItem="4Fh-66-O66" firstAttribute="leading" secondItem="XyW-Sr-EFm" secondAttribute="leading" constant="20" symbolic="YES" id="gry-xm-0d6"/>
-                                        <constraint firstAttribute="bottom" secondItem="4Fh-66-O66" secondAttribute="bottom" constant="20" symbolic="YES" id="jnH-Ns-hs0"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="starshipNameLabel" destination="4Fh-66-O66" id="PGA-zG-qt9"/>
@@ -288,27 +280,24 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="PlanetCell" id="pfz-NT-dDr" customClass="PlanetsTableViewCell" customModule="SWGalaxy_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43.333332061767578"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pfz-NT-dDr" id="YQy-ty-vAk">
-                                    <rect key="frame" x="0.0" y="0.0" width="351" height="43.333332061767578"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="351" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9c-Nn-KEw">
                                             <rect key="frame" x="20" y="10.999999999999998" width="323" height="21.333333333333329"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="y3I-3u-Zox"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="X9c-Nn-KEw" firstAttribute="top" secondItem="YQy-ty-vAk" secondAttribute="topMargin" id="UMf-LO-JVO"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="X9c-Nn-KEw" secondAttribute="trailing" id="Ua8-hu-HUv"/>
-                                        <constraint firstItem="X9c-Nn-KEw" firstAttribute="leading" secondItem="YQy-ty-vAk" secondAttribute="leadingMargin" id="eH2-Ch-Bao"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="X9c-Nn-KEw" secondAttribute="bottom" id="xls-39-aAq"/>
+                                        <constraint firstItem="X9c-Nn-KEw" firstAttribute="top" secondItem="YQy-ty-vAk" secondAttribute="topMargin" id="abP-OK-zBC"/>
+                                        <constraint firstItem="X9c-Nn-KEw" firstAttribute="centerY" secondItem="YQy-ty-vAk" secondAttribute="centerY" id="gdK-CY-u4B"/>
+                                        <constraint firstItem="X9c-Nn-KEw" firstAttribute="leading" secondItem="YQy-ty-vAk" secondAttribute="leadingMargin" id="jMc-zQ-sM1"/>
+                                        <constraint firstItem="X9c-Nn-KEw" firstAttribute="trailing" secondItem="YQy-ty-vAk" secondAttribute="trailingMargin" id="jU2-se-5F5"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

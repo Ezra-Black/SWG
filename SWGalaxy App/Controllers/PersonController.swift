@@ -23,9 +23,8 @@ class PersonController {
     func searchForPeopleWith(searchTerm: String, completion: @escaping () -> Void) {
         print("searchForPeople Triggered")
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
-        print("\(String(describing: urlComponents))")
+        print("The link to the API Resource is: \(String(describing: urlComponents))")
         let searchTermQueryItem = URLQueryItem(name: "search", value: searchTerm)
-        print(searchTermQueryItem)
         urlComponents?.queryItems = [searchTermQueryItem]
         
         guard let requestURL = urlComponents?.url else {
@@ -46,7 +45,7 @@ class PersonController {
                 print("No data returned from data Task")
                 return
             }
-        
+            
             let jsonDecoder = JSONDecoder()
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
             do {

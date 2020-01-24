@@ -21,7 +21,9 @@ class PlanetsController {
     //MARK: Networking Method Call
     
     func searchForStarShipsWith(searchTerm: String, completion: @escaping () -> Void) {
+        print("The search term entered is: \(searchTerm)")
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
+        print("The link to the API Resource is: \(String(describing: urlComponents))")
         let searchTermQUeryItem = URLQueryItem(name: "search", value: searchTerm)
         urlComponents?.queryItems = [searchTermQUeryItem]
         
