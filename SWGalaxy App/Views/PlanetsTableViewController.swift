@@ -9,38 +9,40 @@
 import UIKit
 
 class PlanetsTableViewController: UITableViewController {
+    
+    //MARK: Properties
+    
+    @IBOutlet weak var planetSearchBar: UISearchBar!
+    
+    private let planetController = PlanetsController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        planetSearchBar.delegate = self
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return planetController.planets.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlanetCell", for: indexPath) as? PlanetsTableViewCell else { return UITableViewCell() }
 
-        // Configure the cell...
-
+        let planet = planetController.planets[indexPath.row]
+        cell.planet = planet
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -87,4 +89,19 @@ class PlanetsTableViewController: UITableViewController {
     }
     */
 
+}
+   //MARK: Extensions
+
+   //gives us access to the search text
+
+extension PlanetsTableViewController: UISearchBarDelegate {
+    internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = searchBar.text else { return }
+        //grabs the text we put into the search bar and passes it into the person controller to use the searchForPeopleWith function upon
+        planetController.searchForStarShipsWith(searchTerm: searchTerm) {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
 }

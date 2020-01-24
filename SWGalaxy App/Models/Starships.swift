@@ -13,7 +13,6 @@ struct Starship: Codable {
     let model: String
     let starshipClass: String
     let manufacturer: String
-    let cost: String
     let crew: String
     let passengers: String
 }

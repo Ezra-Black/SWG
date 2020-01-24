@@ -21,7 +21,10 @@ class StarshipsController {
     //MARK: Networking Method Call
     
     func searchForStarShipsWith(searchTerm: String, completion: @escaping () -> Void) {
+        print("searchForStarshipsWithFunction Triggered")
+        print("The search term entered is: \(searchTerm)")
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
+        print("The link to the API Resource is: \(String(describing: urlComponents))")
         let searchTermQueryItem = URLQueryItem(name: "search", value: searchTerm)
         urlComponents?.queryItems = [searchTermQueryItem]
         
@@ -48,12 +51,15 @@ class StarshipsController {
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
             do {
                 let starshipsSearch = try jsonDecoder.decode(StarshipSearch.self, from: data)
+                print(data)
                 self.starships.append(contentsOf: starshipsSearch.results)
+                print(starshipsSearch.results)
             } catch {
                 print("Unable to decode data into object of type [Starships]: \(error)")
             }
-            
-        }
+            completion()
+            print(data)
+        }.resume()
     }
     
 }

@@ -52,8 +52,9 @@ class PlanetsController {
             } catch {
                 print("Unable to decode data into object of type [Planets]: \(error)")
             }
-            
-        }
+            completion()
+            print(data)
+        }.resume()
     }
     
 }

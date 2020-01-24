@@ -52,8 +52,9 @@ class SpeciesController {
             } catch {
                 print("Unable to decode data into object of type [Species]: \(error)")
             }
-            
-        }
+            completion()
+            print(data)
+        }.resume()
     }
     
 }

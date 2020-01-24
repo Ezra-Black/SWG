@@ -11,7 +11,6 @@ import Foundation
 struct Species: Codable {
     let name: String
     let homeworld: String
-    let lifeSpan: String
     let language: String
 }
 

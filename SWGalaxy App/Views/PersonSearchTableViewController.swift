@@ -49,7 +49,7 @@ class PersonSearchTableViewController: UITableViewController {
    //gives us access to the search text
 
    extension PersonSearchTableViewController: UISearchBarDelegate {
-       func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
            guard let searchTerm = searchBar.text else { return }
            //grabs the text we put into the search bar and passes it into the person controller to use the searchForPeopleWith function upon
            personController.searchForPeopleWith(searchTerm: searchTerm) {

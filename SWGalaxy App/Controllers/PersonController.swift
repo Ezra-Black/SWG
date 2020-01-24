@@ -21,8 +21,11 @@ class PersonController {
     //MARK: Neworking Method Call
     
     func searchForPeopleWith(searchTerm: String, completion: @escaping () -> Void) {
+        print("searchForPeople Triggered")
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
+        print("\(String(describing: urlComponents))")
         let searchTermQueryItem = URLQueryItem(name: "search", value: searchTerm)
+        print(searchTermQueryItem)
         urlComponents?.queryItems = [searchTermQueryItem]
         
         guard let requestURL = urlComponents?.url else {
@@ -49,6 +52,7 @@ class PersonController {
             do {
                 let personSearch = try jsonDecoder.decode(PersonSearch.self, from: data)
                 self.people.append(contentsOf: personSearch.results)
+                print(" The result of the call to the API are as follows: \(personSearch.results)")
             } catch {
                 print("Unable to decode data into object of type [Person]: \(error)")
             }

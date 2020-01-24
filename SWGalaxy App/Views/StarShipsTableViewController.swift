@@ -94,18 +94,13 @@ class StarShipsTableViewController: UITableViewController {
 
 }
 
- extension StarShipsTableViewController: UISearchBarDelegate {
-       func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-           guard let searchTerm = searchBar.text else { return }
-//        starShipController.sea(searchTerm: searchTerm) {
-//               DispatchQueue.main.async {
-//                   self.tableView.reloadData()
-//               }
-//           }
+extension StarShipsTableViewController: UISearchBarDelegate {
+    internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = searchBar.text else { return }
         starShipController.searchForStarShipsWith(searchTerm: searchTerm) {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
-       }
+    }
 }
