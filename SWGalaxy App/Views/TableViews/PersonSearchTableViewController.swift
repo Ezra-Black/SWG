@@ -46,7 +46,7 @@ class PersonSearchTableViewController: UITableViewController {
     //MARK: Properties
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "PersonDetailSeugue" {
+        if segue.identifier == "PersonDetailSegue" {
             if let indexPath = tableView.indexPathForSelectedRow,
                 let PersonDetailVC = segue.destination as? PersonDetailViewController {
                 PersonDetailVC.person = personController.people[indexPath.row]
@@ -54,7 +54,7 @@ class PersonSearchTableViewController: UITableViewController {
         } else {
             print("fail")
         }
-    }
+    } 
     
 }
 //MARK: Extensions
