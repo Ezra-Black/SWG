@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		837E85B523DB993800490787 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837E85B423DB993800490787 /* PersonDetailViewController.swift */; };
+		837E85B723DB994100490787 /* StarShipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837E85B623DB994100490787 /* StarShipDetailViewController.swift */; };
+		837E85B923DB994D00490787 /* SpeciesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837E85B823DB994D00490787 /* SpeciesDetailViewController.swift */; };
+		837E85BB23DB995700490787 /* PlanetsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837E85BA23DB995700490787 /* PlanetsDetailViewController.swift */; };
 		83B45A8723D93075002BFF42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B45A8623D93075002BFF42 /* AppDelegate.swift */; };
 		83B45A8923D93075002BFF42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B45A8823D93075002BFF42 /* SceneDelegate.swift */; };
 		83B45A8E23D93075002BFF42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B45A8C23D93075002BFF42 /* Main.storyboard */; };
@@ -32,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		837E85B423DB993800490787 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
+		837E85B623DB994100490787 /* StarShipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipDetailViewController.swift; sourceTree = "<group>"; };
+		837E85B823DB994D00490787 /* SpeciesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesDetailViewController.swift; sourceTree = "<group>"; };
+		837E85BA23DB995700490787 /* PlanetsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsDetailViewController.swift; sourceTree = "<group>"; };
 		83B45A8323D93075002BFF42 /* SWGalaxy App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SWGalaxy App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B45A8623D93075002BFF42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83B45A8823D93075002BFF42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +77,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		837E85B223DB991100490787 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				83B45AA423D94978002BFF42 /* PersonSearchTableViewController.swift */,
+				83B45AB723D96350002BFF42 /* StarShipsTableViewController.swift */,
+				83B45AB923D9635C002BFF42 /* SpeciesTableViewController.swift */,
+				83B45ABB23D96391002BFF42 /* PlanetsTableViewController.swift */,
+				83B45AAE23D96252002BFF42 /* Cells */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		837E85B323DB992300490787 /* Detail Views */ = {
+			isa = PBXGroup;
+			children = (
+				837E85B423DB993800490787 /* PersonDetailViewController.swift */,
+				837E85B623DB994100490787 /* StarShipDetailViewController.swift */,
+				837E85B823DB994D00490787 /* SpeciesDetailViewController.swift */,
+				837E85BA23DB995700490787 /* PlanetsDetailViewController.swift */,
+			);
+			path = "Detail Views";
+			sourceTree = "<group>";
+		};
 		83B45A7A23D93075002BFF42 = {
 			isa = PBXGroup;
 			children = (
@@ -112,11 +143,8 @@
 		83B45A9B23D930B6002BFF42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				83B45AAE23D96252002BFF42 /* Cells */,
-				83B45AA423D94978002BFF42 /* PersonSearchTableViewController.swift */,
-				83B45AB723D96350002BFF42 /* StarShipsTableViewController.swift */,
-				83B45AB923D9635C002BFF42 /* SpeciesTableViewController.swift */,
-				83B45ABB23D96391002BFF42 /* PlanetsTableViewController.swift */,
+				837E85B323DB992300490787 /* Detail Views */,
+				837E85B223DB991100490787 /* TableViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,10 +271,14 @@
 				83B45AA923D952E4002BFF42 /* Species.swift in Sources */,
 				83B45AB023D96269002BFF42 /* StarShipsTableViewCell.swift in Sources */,
 				83B45AB223D96281002BFF42 /* PersonTableViewCell.swift in Sources */,
+				837E85B523DB993800490787 /* PersonDetailViewController.swift in Sources */,
 				83B45AAD23D95B15002BFF42 /* StarShipsController.swift in Sources */,
 				83B45AA123D9485C002BFF42 /* Person.swift in Sources */,
 				83B45ABC23D96391002BFF42 /* PlanetsTableViewController.swift in Sources */,
+				837E85BB23DB995700490787 /* PlanetsDetailViewController.swift in Sources */,
 				83B45AB623D9629F002BFF42 /* PlanetsTableViewCell.swift in Sources */,
+				837E85B723DB994100490787 /* StarShipDetailViewController.swift in Sources */,
+				837E85B923DB994D00490787 /* SpeciesDetailViewController.swift in Sources */,
 				83B45A8923D93075002BFF42 /* SceneDelegate.swift in Sources */,
 				83B45AC023D963CA002BFF42 /* PlanetsController.swift in Sources */,
 				83B45ABA23D9635C002BFF42 /* SpeciesTableViewController.swift in Sources */,
