@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Person: Codable {
+struct Person: Codable, Hashable {
     let name: String
     let gender: String
     let birthYear: String

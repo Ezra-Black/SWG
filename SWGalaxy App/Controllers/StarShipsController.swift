@@ -14,6 +14,7 @@ class StarshipsController {
     
     var starships: [Starship] = []
     
+    
     //MARK: Networking
     
     let baseURL = URL(string:  "https://swapi.co/api/starships")!
@@ -22,43 +23,45 @@ class StarshipsController {
     
     func searchForStarShipsWith(searchTerm: String, completion: @escaping () -> Void) {
         print("searchForStarshipsWithFunction Triggered")
-        print("The search term entered is: \(searchTerm)")
-        var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
-        print("The link to the API Resource is: \(String(describing: urlComponents))")
-        let searchTermQueryItem = URLQueryItem(name: "search", value: searchTerm)
-        urlComponents?.queryItems = [searchTermQueryItem]
         
-        guard let requestURL = urlComponents?.url else {
-            print("request URL is nil")
-            completion()
-            return
-        }
-        
-        var request = URLRequest(url: requestURL)
-        request.httpMethod = HTTPMethod.get.rawValue
-        
-        URLSession.shared.dataTask(with: request) { data, _, error in
-            if let error = error {
-                print("Error fetching data: \(error)")
-                return
-            }
-            guard let data = data else {
-                print("No data returned from data Task")
+            var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
+            print("The link to the API Resource is: \(String(describing: urlComponents))")
+            let searchTermQueryItem = URLQueryItem(name: "search", value: searchTerm)
+            
+            urlComponents?.queryItems = [searchTermQueryItem]
+            
+            guard let requestURL = urlComponents?.url else {
+                print("request URL is nil")
+                completion()
                 return
             }
             
-            let jsonDecoder = JSONDecoder()
-            jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-            do {
-                let starshipsSearch = try jsonDecoder.decode(StarshipSearch.self, from: data)
-                self.starships.append(contentsOf: starshipsSearch.results)
-                print(starshipsSearch.results)
-            } catch {
-                print("Unable to decode data into object of type [Starships]: \(error)")
-            }
-            completion()
-            print(data)
-        }.resume()
+            var request = URLRequest(url: requestURL)
+            request.httpMethod = HTTPMethod.get.rawValue
+            
+            URLSession.shared.dataTask(with: request) { data, _, error in
+                if let error = error {
+                    print("Error fetching data: \(error)")
+                    return
+                }
+                guard let data = data else {
+                    print("No data returned from data Task")
+                    return
+                }
+                
+                let jsonDecoder = JSONDecoder()
+                jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                do {
+                    let starshipsSearch = try jsonDecoder.decode(StarshipSearch.self, from: data)
+                    self.starships.removeAll()
+                    self.starships.append(contentsOf: starshipsSearch.results)
+                    print(starshipsSearch.results)
+                } catch {
+                    print("Unable to decode data into object of type [Starships]: \(error)")
+                }
+                completion()
+                print(data)
+            }.resume()
+        
     }
-    
 }

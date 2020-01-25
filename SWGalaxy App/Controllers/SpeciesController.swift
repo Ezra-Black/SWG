@@ -14,6 +14,7 @@ class SpeciesController {
     
     var species: [Species] = []
     
+    
     //MARK: Networking
     
     let baseURL = URL(string:  "https://swapi.co/api/species")!
@@ -21,10 +22,11 @@ class SpeciesController {
     //MARK: Networking Method Call
     
     func searchForSpeciesWith(searchTerm: String, completion: @escaping () -> Void) {
-        print("The search term entered is: \(searchTerm)")
+        
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         print("The link to the API Resource is: \(String(describing: urlComponents))")
         let searchTermQUeryItem = URLQueryItem(name: "search", value: searchTerm)
+            
         urlComponents?.queryItems = [searchTermQUeryItem]
         
         guard let requestURL = urlComponents?.url else {
@@ -50,6 +52,7 @@ class SpeciesController {
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
             do {
                 let speciesSearch = try jsonDecoder.decode(SpeciesSearch.self, from: data)
+                self.species.removeAll()
                 self.species.append(contentsOf: speciesSearch.results)
             } catch {
                 print("Unable to decode data into object of type [Species]: \(error)")

@@ -104,7 +104,7 @@ extension PlanetsTableViewController: UISearchBarDelegate {
     internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchTerm = searchBar.text else { return }
         //grabs the text we put into the search bar and passes it into the person controller to use the searchForPeopleWith function upon
-        planetController.searchForStarShipsWith(searchTerm: searchTerm) {
+        planetController.searchForPlanetsWith(searchTerm: searchTerm) {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
