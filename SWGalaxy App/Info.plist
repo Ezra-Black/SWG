@@ -67,5 +67,7 @@
 		<string>Starjhol.tff</string>
 		<string>STJEDISE.TTF</string>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>
