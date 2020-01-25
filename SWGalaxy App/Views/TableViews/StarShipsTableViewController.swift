@@ -1,5 +1,5 @@
 //
-//  SpeciesTableViewController.swift
+//  StarShipsTableViewController.swift
 //  SWGalaxy App
 //
 //  Created by Joseph Rogers on 1/22/20.
@@ -8,18 +8,20 @@
 
 import UIKit
 
-class SpeciesTableViewController: UITableViewController {
+class StarShipsTableViewController: UITableViewController {
     
-    //mark: Properties
     
-    @IBOutlet weak var speciesSearchBar: UISearchBar!
+    //MARK: Properties
     
-    private let speciesController = SpeciesController()
+    @IBOutlet weak var starshipSearchBar: UISearchBar!
+    
+    private let starShipController = StarshipsController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        speciesSearchBar.delegate = self
+        starshipSearchBar.delegate = self
+        
     }
     
     // MARK: - Table view data source
@@ -31,15 +33,15 @@ class SpeciesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return speciesController.species.count
+        return starShipController.starships.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SpeciesCell", for: indexPath) as? SpeciesTableViewCell else { return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StarShipCell", for: indexPath) as? StarShipsTableViewCell else { return UITableViewCell()}
         
-        let species = speciesController.species[indexPath.row]
-        cell.species = species
+        let starship = starShipController.starships[indexPath.row]
+        cell.starship = starship
         
         return cell
     }
@@ -80,22 +82,28 @@ class SpeciesTableViewController: UITableViewController {
      }
      */
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
+        if segue.identifier == "StarshipDetailSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow,
+                let StarshipDetailVC = segue.destination as? StarShipDetailViewController {
+                StarshipDetailVC.starship = starShipController.starships[indexPath.row]
+            }
+        } else {
+            print("fail")
+        }
      }
-     */
+     
     
 }
-extension SpeciesTableViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+
+extension StarShipsTableViewController: UISearchBarDelegate {
+    internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchTerm = searchBar.text else { return }
-        //grabs the text we put into the search bar and passes it into the person controller to use the searchForPeopleWith function upon
-        speciesController.searchForSpeciesWith(searchTerm: searchTerm) {
+        starShipController.searchForStarShipsWith(searchTerm: searchTerm) {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

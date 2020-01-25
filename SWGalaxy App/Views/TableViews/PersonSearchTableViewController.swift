@@ -42,8 +42,21 @@ class PersonSearchTableViewController: UITableViewController {
         cell.person = person
         return cell
     }
+    
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PersonDetailSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow,
+                let PersonDetailVC = segue.destination as? PersonDetailViewController {
+                PersonDetailVC.person = personController.people[indexPath.row]
+            }
+        } else {
+            print("fail")
+        }
+    }
+    
 }
-
 //MARK: Extensions
 
 //gives us access to the search text
