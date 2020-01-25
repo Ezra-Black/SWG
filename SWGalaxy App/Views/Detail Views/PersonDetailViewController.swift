@@ -37,11 +37,6 @@ class PersonDetailViewController: UIViewController {
     
     //MARK: Actions
     
-    @IBAction func printDataInPerson(_sender: UIButton) {
-        print("The data inside of person that was passed to this viewcontroller from the segue function is as follows : \(String(describing: person))")
-    }
-    
-
     /*
     // MARK: - Navigation
 
