@@ -62,6 +62,7 @@ class PersonSearchTableViewController: UITableViewController {
 //gives us access to the search text
 extension PersonSearchTableViewController: UISearchBarDelegate {
     internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.personSearchBar.endEditing(true)
         guard let searchTerm = searchBar.text else { return }
         //grabs the text we put into the search bar and passes it into the person controller to use the searchForPeopleWith function upon
         personController.searchForPeopleWith(searchTerm: searchTerm) {
@@ -70,6 +71,7 @@ extension PersonSearchTableViewController: UISearchBarDelegate {
             DispatchQueue.main.async {
                 //takes this line of data and sends it back to the main queue. the main queue is the event loop which is only allowed to do UI updates.
                 self.tableView.reloadData()
+                
             }
         }
     }
