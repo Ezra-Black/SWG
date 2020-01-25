@@ -43,7 +43,7 @@ class PersonSearchTableViewController: UITableViewController {
         return cell
     }
     
-    //MARK: Properties
+    //MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PersonDetailSegue" {
@@ -54,7 +54,7 @@ class PersonSearchTableViewController: UITableViewController {
         } else {
             print("fail")
         }
-    } 
+    }
     
 }
 //MARK: Extensions

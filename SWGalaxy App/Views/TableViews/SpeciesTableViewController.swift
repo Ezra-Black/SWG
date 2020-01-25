@@ -80,15 +80,23 @@ class SpeciesTableViewController: UITableViewController {
      }
      */
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SpeciesDetailSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow,
+                let SpeciesDetailVC = segue.destination as? SpeciesDetailViewController {
+                SpeciesDetailVC.species = speciesController.species[indexPath.row]
+            }
+        } else {
+            print("fail")
+        }
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
      }
-     */
+     
     
 }
 extension SpeciesTableViewController: UISearchBarDelegate {

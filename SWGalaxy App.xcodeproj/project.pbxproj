@@ -143,8 +143,8 @@
 		83B45A9B23D930B6002BFF42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				837E85B323DB992300490787 /* Detail Views */,
 				837E85B223DB991100490787 /* TableViews */,
+				837E85B323DB992300490787 /* Detail Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
