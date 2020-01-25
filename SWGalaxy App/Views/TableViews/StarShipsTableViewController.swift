@@ -102,6 +102,7 @@ class StarShipsTableViewController: UITableViewController {
 
 extension StarShipsTableViewController: UISearchBarDelegate {
     internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.starshipSearchBar.endEditing(true)
         guard let searchTerm = searchBar.text else { return }
         starShipController.searchForStarShipsWith(searchTerm: searchTerm) {
             DispatchQueue.main.async {

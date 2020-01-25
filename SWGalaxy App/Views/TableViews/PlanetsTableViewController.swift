@@ -102,6 +102,7 @@ class PlanetsTableViewController: UITableViewController {
 
 extension PlanetsTableViewController: UISearchBarDelegate {
     internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.planetSearchBar.endEditing(true)
         guard let searchTerm = searchBar.text else { return }
         //grabs the text we put into the search bar and passes it into the person controller to use the searchForPeopleWith function upon
         planetController.searchForPlanetsWith(searchTerm: searchTerm) {

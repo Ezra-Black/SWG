@@ -101,6 +101,7 @@ class SpeciesTableViewController: UITableViewController {
 }
 extension SpeciesTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.speciesSearchBar.endEditing(true)
         guard let searchTerm = searchBar.text else { return }
         //grabs the text we put into the search bar and passes it into the person controller to use the searchForPeopleWith function upon
         speciesController.searchForSpeciesWith(searchTerm: searchTerm) {
