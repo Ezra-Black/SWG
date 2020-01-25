@@ -13,7 +13,7 @@ class PlanetsController {
     //MARK: Properties
     
     var planets: [Planet] = []
-    var oldSearchTerms: [String] = []
+    
     
     //MARK: Networking
     
@@ -22,14 +22,11 @@ class PlanetsController {
     //MARK: Networking Method Call
     
     func searchForPlanetsWith(searchTerm: String, completion: @escaping () -> Void) {
-        if oldSearchTerms.contains(searchTerm) {
-            print("The search term you have entered has already been pulled for a planet.")
-        } else {
+        
             var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
             print("The link to the API Resource is: \(String(describing: urlComponents))")
             let searchTermQUeryItem = URLQueryItem(name: "search", value: searchTerm)
-            oldSearchTerms.append(searchTerm)
-            print(oldSearchTerms)
+            
             urlComponents?.queryItems = [searchTermQUeryItem]
             
             guard let requestURL = urlComponents?.url else {
@@ -55,6 +52,7 @@ class PlanetsController {
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 do {
                     let planetSearch = try jsonDecoder.decode(PlanetsSearch.self, from: data)
+                    self.planets.removeAll()
                     self.planets.append(contentsOf: planetSearch.results)
                 } catch {
                     print("Unable to decode data into object of type [Planets]: \(error)")
@@ -63,5 +61,5 @@ class PlanetsController {
                 print(data)
             }.resume()
         }
-    }
+    
 }

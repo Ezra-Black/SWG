@@ -13,7 +13,7 @@ class PersonController {
     //MARK: Properties
     
     var people: [Person] = []
-    private var oldSearchTerms: [String] = []
+    
     
     //MARK: Networking
     
@@ -23,13 +23,10 @@ class PersonController {
     
     func searchForPeopleWith(searchTerm: String, completion: @escaping () -> Void) {
         print("searchForPeople Triggered")
-        if oldSearchTerms.contains(searchTerm) {
-            print("The search term you have entered has already been pulled for a person.")
-        } else {
             var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
             print("The link to the API Resource is: \(String(describing: urlComponents))")
             let searchTermQueryItem = URLQueryItem(name: "search", value: searchTerm)
-            oldSearchTerms.append(searchTerm)
+           
             urlComponents?.queryItems = [searchTermQueryItem]
             
             guard let requestURL = urlComponents?.url else {
@@ -55,6 +52,7 @@ class PersonController {
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 do {
                     let personSearch = try jsonDecoder.decode(PersonSearch.self, from: data)
+                    self.people.removeAll()
                     self.people.append(contentsOf: personSearch.results)
                     print(" The result of the call to the API are as follows: \(personSearch.results)")
                 } catch {
@@ -63,6 +61,6 @@ class PersonController {
                 completion()
                 print(data)
             }.resume()
-        }
+        
     }
 }

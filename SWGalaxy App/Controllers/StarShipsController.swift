@@ -13,7 +13,7 @@ class StarshipsController {
     //MARK: Properties
     
     var starships: [Starship] = []
-    private var oldsearchTerms: [String] = []
+    
     
     //MARK: Networking
     
@@ -23,13 +23,11 @@ class StarshipsController {
     
     func searchForStarShipsWith(searchTerm: String, completion: @escaping () -> Void) {
         print("searchForStarshipsWithFunction Triggered")
-        if oldsearchTerms.contains(searchTerm) {
-            print("The search term you have entered has already been pulled for a Starship.")
-        } else {
+        
             var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
             print("The link to the API Resource is: \(String(describing: urlComponents))")
             let searchTermQueryItem = URLQueryItem(name: "search", value: searchTerm)
-            self.oldsearchTerms.append(searchTerm)
+            
             urlComponents?.queryItems = [searchTermQueryItem]
             
             guard let requestURL = urlComponents?.url else {
@@ -55,6 +53,7 @@ class StarshipsController {
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 do {
                     let starshipsSearch = try jsonDecoder.decode(StarshipSearch.self, from: data)
+                    self.starships.removeAll()
                     self.starships.append(contentsOf: starshipsSearch.results)
                     print(starshipsSearch.results)
                 } catch {
@@ -63,6 +62,6 @@ class StarshipsController {
                 completion()
                 print(data)
             }.resume()
-        }
+        
     }
 }
