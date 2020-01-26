@@ -12,6 +12,7 @@ class PersonDetailViewController: UIViewController {
     
     //MARK: Properties
     
+    @IBOutlet weak var personImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var birthYearLabel: UILabel!
@@ -23,6 +24,7 @@ class PersonDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
+        personImage.image = UIImage(named: "Joe2")
         // Do any additional setup after loading the view.
     }
     
