@@ -23,7 +23,6 @@ class PersonDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
-        personImage.image = UIImage(named: "Joe2")
         // Do any additional setup after loading the view.
     }
     
