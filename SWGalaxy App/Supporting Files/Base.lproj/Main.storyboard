@@ -171,7 +171,6 @@
                         <outlet property="heightLabel" destination="J7x-ff-8To" id="DwX-rT-lMD"/>
                         <outlet property="massLabel" destination="eva-C1-HC8" id="e9w-iE-MZ2"/>
                         <outlet property="nameLabel" destination="YqE-6C-o7L" id="Ejr-PU-8iA"/>
-                        <outlet property="personImage" destination="srw-S1-8qC" id="PdB-6e-I8i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mei-ag-RgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

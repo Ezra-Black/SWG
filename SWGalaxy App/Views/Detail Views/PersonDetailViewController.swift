@@ -12,7 +12,6 @@ class PersonDetailViewController: UIViewController {
     
     //MARK: Properties
     
-    @IBOutlet weak var personImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var birthYearLabel: UILabel!
