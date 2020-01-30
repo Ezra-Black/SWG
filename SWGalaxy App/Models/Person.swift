@@ -15,6 +15,7 @@ struct Person: Codable, Hashable {
     let height: String
     let mass: String
 }
+
 struct PersonSearch: Codable {
     let results: [Person]
 }
