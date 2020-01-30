@@ -83,10 +83,10 @@ class StarShipsTableViewController: UITableViewController {
      */
     
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "StarshipDetailSegue" {
             if let indexPath = tableView.indexPathForSelectedRow,
                 let StarshipDetailVC = segue.destination as? StarShipDetailViewController {
@@ -95,8 +95,8 @@ class StarShipsTableViewController: UITableViewController {
         } else {
             print("fail")
         }
-     }
-     
+    }
+    
     
 }
 

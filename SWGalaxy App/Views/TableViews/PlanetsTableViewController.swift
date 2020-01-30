@@ -80,10 +80,10 @@ class PlanetsTableViewController: UITableViewController {
      */
     
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PlanetDetailSegue" {
             if let indexPath = tableView.indexPathForSelectedRow,
                 let PlanetDetailVC = segue.destination as? PlanetsDetailViewController {
@@ -92,8 +92,8 @@ class PlanetsTableViewController: UITableViewController {
         } else {
             print("Fail")
         }
-     }
-     
+    }
+    
     
 }
 //MARK: Extensions
