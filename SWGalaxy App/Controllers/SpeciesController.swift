@@ -26,7 +26,7 @@ class SpeciesController {
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         print("The link to the API Resource is: \(String(describing: urlComponents))")
         let searchTermQUeryItem = URLQueryItem(name: "search", value: searchTerm)
-            
+        
         urlComponents?.queryItems = [searchTermQUeryItem]
         
         guard let requestURL = urlComponents?.url else {
