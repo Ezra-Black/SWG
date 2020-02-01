@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		837E737623E53B21004393E7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837E737523E53B21004393E7 /* WelcomeViewController.swift */; };
 		837E85B523DB993800490787 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837E85B423DB993800490787 /* PersonDetailViewController.swift */; };
 		837E85B723DB994100490787 /* StarShipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837E85B623DB994100490787 /* StarShipDetailViewController.swift */; };
 		837E85B923DB994D00490787 /* SpeciesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837E85B823DB994D00490787 /* SpeciesDetailViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		837E737523E53B21004393E7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		837E85B423DB993800490787 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		837E85B623DB994100490787 /* StarShipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipDetailViewController.swift; sourceTree = "<group>"; };
 		837E85B823DB994D00490787 /* SpeciesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesDetailViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				837E85B223DB991100490787 /* TableViews */,
 				837E85B323DB992300490787 /* Detail Views */,
+				837E737523E53B21004393E7 /* WelcomeViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				83B45AB023D96269002BFF42 /* StarShipsTableViewCell.swift in Sources */,
 				83B45AB223D96281002BFF42 /* PersonTableViewCell.swift in Sources */,
 				837E85B523DB993800490787 /* PersonDetailViewController.swift in Sources */,
+				837E737623E53B21004393E7 /* WelcomeViewController.swift in Sources */,
 				83B45AAD23D95B15002BFF42 /* StarShipsController.swift in Sources */,
 				83B45AA123D9485C002BFF42 /* Person.swift in Sources */,
 				83B45ABC23D96391002BFF42 /* PlanetsTableViewController.swift in Sources */,
