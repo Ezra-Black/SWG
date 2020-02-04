@@ -61,5 +61,4 @@ class SpeciesController {
             print(data)
         }.resume()
     }
-    
 }
