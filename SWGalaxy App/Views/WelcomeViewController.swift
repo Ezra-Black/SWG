@@ -9,6 +9,8 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+    
+    //Thank you so much for checking out the App! 
 
     override func viewDidLoad() {
         super.viewDidLoad()

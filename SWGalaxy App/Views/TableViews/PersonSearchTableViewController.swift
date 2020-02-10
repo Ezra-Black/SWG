@@ -10,6 +10,7 @@ import UIKit
 
 class PersonSearchTableViewController: UITableViewController {
     
+    
     //MARK: Properties
     
     @IBOutlet weak var personSearchBar: UISearchBar!
