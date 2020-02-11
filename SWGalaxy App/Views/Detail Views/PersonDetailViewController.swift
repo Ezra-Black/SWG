@@ -25,7 +25,6 @@ class PersonDetailViewController: UIViewController {
         updateViews()
         // Do any additional setup after loading the view.
     }
-    
     private func updateViews() {
         guard let person = person else { return }
         nameLabel.text = "Name: \(person.name)"

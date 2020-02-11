@@ -10,6 +10,7 @@ import UIKit
 
 class PlanetsTableViewController: UITableViewController {
     
+    
     //MARK: Properties
     
     @IBOutlet weak var planetSearchBar: UISearchBar!

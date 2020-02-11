@@ -10,6 +10,7 @@ import UIKit
 
 class SpeciesTableViewController: UITableViewController {
     
+    
     //mark: Properties
     
     @IBOutlet weak var speciesSearchBar: UISearchBar!
