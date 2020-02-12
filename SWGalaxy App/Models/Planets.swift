@@ -18,3 +18,5 @@ struct Planet: Codable {
 struct PlanetsSearch: Codable {
     let results: [Planet]
 }
+
+//thank you for using my app! 
