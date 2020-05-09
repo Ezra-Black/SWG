@@ -17,7 +17,7 @@ class PersonController {
     
     //MARK: Networking
     
-    let baseURL = URL(string: "https://swapi.co/api/people")!
+    let baseURL = URL(string: "https://swapi.dev/api/people")!
     
     //MARK: Neworking Method Call
     

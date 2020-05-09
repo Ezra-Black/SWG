@@ -17,7 +17,7 @@ class PlanetsController {
     
     //MARK: Networking
     
-    let baseURL = URL(string:  "https://swapi.co/api/planets")!
+    let baseURL = URL(string:  "https://swapi.dev/api/planets")!
     
     //MARK: Networking Method Call
     

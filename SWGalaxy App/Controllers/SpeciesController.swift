@@ -17,7 +17,7 @@ class SpeciesController {
     
     //MARK: Networking
     
-    let baseURL = URL(string:  "https://swapi.co/api/species")!
+    let baseURL = URL(string:  "https://swapi.dev/api/species")!
     
     //MARK: Networking Method Call
     

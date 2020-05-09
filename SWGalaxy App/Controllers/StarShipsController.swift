@@ -17,7 +17,7 @@ class StarshipsController {
     
     //MARK: Networking
     
-    let baseURL = URL(string:  "https://swapi.co/api/starships")!
+    let baseURL = URL(string:  "https://swapi.dev/api/starships")!
     
     //MARK: Networking Method Call
     
