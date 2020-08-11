@@ -12,6 +12,7 @@ class PersonDetailViewController: UIViewController {
     
     //MARK: Properties
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var birthYearLabel: UILabel!
@@ -26,11 +27,16 @@ class PersonDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     private func updateViews() {
-        guard let person = person else { return }
+        guard let person = person,
+            person.name == "Luke Skywalker" else { return }
+        DispatchQueue.main.async {
+            self.imageView.image = UIImage(named: "Luke.png")
+        }
         nameLabel.text = "Name: \(person.name)"
         genderLabel.text = "Gender: \(person.gender)"
         birthYearLabel.text = "Birth Year: \(person.birthYear)"
         heightLabel.text = "Height: \(person.height)"
         massLabel.text = "Mass(kg): \(person.mass)"
+        
     }
 }
