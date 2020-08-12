@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Luke 2 Icon.png",
+      "filename" : "Obi-Wan.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Luke 2 Icon@2x.png",
+      "filename" : "Obi-Wan@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Luke 2 Icon@3x.png",
+      "filename" : "Obi-Wan@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
