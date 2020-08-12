@@ -5,39 +5,27 @@
 //  Created by Joseph Rogers on 1/22/20.
 //  Copyright © 2020 Casanova Studios. All rights reserved.
 //
-
 import Foundation
 
 class PersonController {
-    
     //MARK: Properties
-    
     var people: [Person] = []
-    
-    
     //MARK: Networking
-    
     let baseURL = URL(string: "https://swapi.dev/api/people")!
-    
     //MARK: Neworking Method Call
-    
     func searchForPeopleWith(searchTerm: String, completion: @escaping () -> Void) {
         print("searchForPeople Triggered")
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         print("The link to the API Resource is: \(String(describing: urlComponents))")
         let searchTermQueryItem = URLQueryItem(name: "search", value: searchTerm)
-        
         urlComponents?.queryItems = [searchTermQueryItem]
-        
         guard let requestURL = urlComponents?.url else {
             print("request URL is nil")
             completion()
             return
         }
-        
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
-        
         URLSession.shared.dataTask(with: request) { data, _, error in
             if let error = error {
                 print("Error fetching data: \(error)")
