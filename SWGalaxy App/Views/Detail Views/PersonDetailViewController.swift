@@ -27,6 +27,13 @@ class PersonDetailViewController: UIViewController {
     }
     private func updateViews() {
         guard let person = person else { return }
+        if person.name == "Luke Skywalker" {
+            self.imageView.image = UIImage(named: "Luke.png")
+        } else if person.name == "Leia Organa" {
+            self.imageView.image = UIImage(named: "Leia.png")
+        } else if person.name == "Obi-Wan Kenobi" {
+            self.imageView.image = UIImage(named: "Obi-Wan.png")
+        }
         nameLabel.text = "Name: \(person.name)"
         genderLabel.text = "Gender: \(person.gender)"
         birthYearLabel.text = "Birth Year: \(person.birthYear)"
