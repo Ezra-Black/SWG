@@ -39,6 +39,8 @@ class PersonDetailViewController: UIViewController {
             self.imageView.image = UIImage(named: "Han.png")
         } else if person.name == "Biggs Darklighter" {
             self.imageView.image = UIImage(named: "Biggs.png")
+        } else if person.name == "C-3PO" {
+            self.imageView.image = UIImage(named: "c3po.png")
         }
         nameLabel.text = "Name: \(person.name)"
         genderLabel.text = "Gender: \(person.gender)"
