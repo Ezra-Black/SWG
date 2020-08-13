@@ -24,6 +24,7 @@ class PersonDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
+
         // Do any additional setup after loading the view.
     }
     private func updateViews() {
@@ -34,6 +35,10 @@ class PersonDetailViewController: UIViewController {
             self.imageView.image = UIImage(named: "Leia.png")
         } else if person.name == "Obi-Wan Kenobi" {
             self.imageView.image = UIImage(named: "Obi-Wan.png")
+        } else if person.name == "Han Solo" {
+            self.imageView.image = UIImage(named: "Han.png")
+        } else if person.name == "Biggs Darklighter" {
+            self.imageView.image = UIImage(named: "Biggs.png")
         }
         nameLabel.text = "Name: \(person.name)"
         genderLabel.text = "Gender: \(person.gender)"

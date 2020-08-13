@@ -56,7 +56,6 @@ class PersonSearchTableViewController: UITableViewController {
             print("fail")
         }
     }
-    
 }
 //MARK: Extensions
 
