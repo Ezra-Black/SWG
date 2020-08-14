@@ -19,3 +19,5 @@ struct Person: Codable, Hashable {
 struct PersonSearch: Codable {
     let results: [Person]
 }
+
+
