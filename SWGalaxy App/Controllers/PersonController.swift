@@ -34,7 +34,6 @@ class PersonController {
             completion()
             return
         }
-        
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
         
@@ -61,6 +60,5 @@ class PersonController {
             completion()
             print(data)
         }.resume()
-        
     }
 }

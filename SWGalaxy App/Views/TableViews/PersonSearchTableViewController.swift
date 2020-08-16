@@ -19,7 +19,6 @@ class PersonSearchTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //tell the search bar that this page is the delegate. so we can intercept the return key press
         personSearchBar.delegate = self
         

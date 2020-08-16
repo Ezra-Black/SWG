@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FCEE71724E880EF00B36E7B /* Images+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCEE71624E880EF00B36E7B /* Images+Convenience.swift */; };
 		8335F66E23EF555D005F4249 /* PeopleTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335F66D23EF555D005F4249 /* PeopleTab.storyboard */; };
 		8335F67123EF5579005F4249 /* ShipsTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335F66F23EF5579005F4249 /* ShipsTab.storyboard */; };
 		8335F67323EF5587005F4249 /* SpeciesTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335F67223EF5587005F4249 /* SpeciesTab.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7FCEE71624E880EF00B36E7B /* Images+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Images+Convenience.swift"; sourceTree = "<group>"; };
 		8335F66D23EF555D005F4249 /* PeopleTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PeopleTab.storyboard; sourceTree = "<group>"; };
 		8335F67023EF5579005F4249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SWGalaxy App/Supporting Files/Base.lproj/ShipsTab.storyboard"; sourceTree = "<group>"; };
 		8335F67223EF5587005F4249 /* SpeciesTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpeciesTab.storyboard; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				83B45A8F23D93078002BFF42 /* Assets.xcassets */,
 				83B45A9123D93078002BFF42 /* LaunchScreen.storyboard */,
 				83B45AA223D948C1002BFF42 /* HTTPMethods.swift */,
+				7FCEE71624E880EF00B36E7B /* Images+Convenience.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				837E85B723DB994100490787 /* StarShipDetailViewController.swift in Sources */,
 				837E85B923DB994D00490787 /* SpeciesDetailViewController.swift in Sources */,
 				83B45A8923D93075002BFF42 /* SceneDelegate.swift in Sources */,
+				7FCEE71724E880EF00B36E7B /* Images+Convenience.swift in Sources */,
 				83B45AC023D963CA002BFF42 /* PlanetsController.swift in Sources */,
 				83B45ABA23D9635C002BFF42 /* SpeciesTableViewController.swift in Sources */,
 				83B45ABE23D963BC002BFF42 /* SpeciesController.swift in Sources */,
