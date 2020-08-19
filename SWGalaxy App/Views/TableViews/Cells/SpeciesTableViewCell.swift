@@ -9,7 +9,6 @@
 import UIKit
 
 class SpeciesTableViewCell: UITableViewCell {
-
     @IBOutlet weak var speciesNameLabel: UILabel!
     
     var species: Species? {
