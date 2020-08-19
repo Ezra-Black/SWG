@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F134EF824EC72130098F0FC /* PersonCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F134EF724EC72130098F0FC /* PersonCollectionViewController.swift */; };
+		7F134EFB24EC72490098F0FC /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F134EFA24EC72490098F0FC /* PersonCollectionViewCell.swift */; };
+		7F134EFF24EC7C060098F0FC /* SampleCollectionCellBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F134EFE24EC7C060098F0FC /* SampleCollectionCellBoard.storyboard */; };
 		7FCEE71724E880EF00B36E7B /* Images+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCEE71624E880EF00B36E7B /* Images+Convenience.swift */; };
 		8335F66E23EF555D005F4249 /* PeopleTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335F66D23EF555D005F4249 /* PeopleTab.storyboard */; };
 		8335F67123EF5579005F4249 /* ShipsTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335F66F23EF5579005F4249 /* ShipsTab.storyboard */; };
@@ -42,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F134EF724EC72130098F0FC /* PersonCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewController.swift; sourceTree = "<group>"; };
+		7F134EFA24EC72490098F0FC /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F134EFE24EC7C060098F0FC /* SampleCollectionCellBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SampleCollectionCellBoard.storyboard; sourceTree = "<group>"; };
 		7FCEE71624E880EF00B36E7B /* Images+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Images+Convenience.swift"; sourceTree = "<group>"; };
 		8335F66D23EF555D005F4249 /* PeopleTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PeopleTab.storyboard; sourceTree = "<group>"; };
 		8335F67023EF5579005F4249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SWGalaxy App/Supporting Files/Base.lproj/ShipsTab.storyboard"; sourceTree = "<group>"; };
@@ -89,6 +95,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F134EF624EC71FD0098F0FC /* Collection Views */ = {
+			isa = PBXGroup;
+			children = (
+				7F134EF924EC72340098F0FC /* CollectionCells */,
+				7F134EF724EC72130098F0FC /* PersonCollectionViewController.swift */,
+			);
+			name = "Collection Views";
+			sourceTree = "<group>";
+		};
+		7F134EF924EC72340098F0FC /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				7F134EFA24EC72490098F0FC /* PersonCollectionViewCell.swift */,
+			);
+			name = CollectionCells;
+			sourceTree = "<group>";
+		};
 		8335F67723EF55AA005F4249 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +120,7 @@
 				8335F67223EF5587005F4249 /* SpeciesTab.storyboard */,
 				8335F66F23EF5579005F4249 /* ShipsTab.storyboard */,
 				8335F66D23EF555D005F4249 /* PeopleTab.storyboard */,
+				7F134EFE24EC7C060098F0FC /* SampleCollectionCellBoard.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -167,6 +191,7 @@
 		83B45A9B23D930B6002BFF42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7F134EF624EC71FD0098F0FC /* Collection Views */,
 				837E85B223DB991100490787 /* TableViews */,
 				837E85B323DB992300490787 /* Detail Views */,
 				837E737523E53B21004393E7 /* WelcomeViewController.swift */,
@@ -277,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8335F67123EF5579005F4249 /* ShipsTab.storyboard in Resources */,
+				7F134EFF24EC7C060098F0FC /* SampleCollectionCellBoard.storyboard in Resources */,
 				83B45A9323D93078002BFF42 /* LaunchScreen.storyboard in Resources */,
 				83B45A9023D93078002BFF42 /* Assets.xcassets in Resources */,
 				8335F67623EF5598005F4249 /* PlanetsTab.storyboard in Resources */,
@@ -312,8 +338,10 @@
 				837E85B923DB994D00490787 /* SpeciesDetailViewController.swift in Sources */,
 				83B45A8923D93075002BFF42 /* SceneDelegate.swift in Sources */,
 				7FCEE71724E880EF00B36E7B /* Images+Convenience.swift in Sources */,
+				7F134EF824EC72130098F0FC /* PersonCollectionViewController.swift in Sources */,
 				83B45AC023D963CA002BFF42 /* PlanetsController.swift in Sources */,
 				83B45ABA23D9635C002BFF42 /* SpeciesTableViewController.swift in Sources */,
+				7F134EFB24EC72490098F0FC /* PersonCollectionViewCell.swift in Sources */,
 				83B45ABE23D963BC002BFF42 /* SpeciesController.swift in Sources */,
 				83B45AA723D952D9002BFF42 /* Starships.swift in Sources */,
 				83B45AB423D96292002BFF42 /* SpeciesTableViewCell.swift in Sources */,
