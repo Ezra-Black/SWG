@@ -15,6 +15,7 @@ class SpeciesDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var homeworldLabel: UILabel!
     @IBOutlet weak var language: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     var species: Species?
 
@@ -26,6 +27,11 @@ class SpeciesDetailViewController: UIViewController {
     
     private func updateViews() {
         guard let species = species else { return }
+        
+        if species.name == "Gungan" {
+            self.imageView.image = UIImage(named: "Gungan.png")
+        }
+        
         nameLabel.text = "Name: \(species.name)"
         homeworldLabel.text = "HomeWorld: \(species.homeworld)"
         language.text = "Language: \(species.language)"
