@@ -43,7 +43,12 @@ class PersonDetailViewController: UIViewController {
             self.imageView.image = UIImage(named: "c3po.png")
         } else if person.name == "Darth Vader" {
             self.imageView.image = UIImage(named: "Darth.png")
+        } else if person.name == "Beru Whitesun lars" {
+            self.imageView.image = UIImage(named: "Beru.png")
         }
+        
+        
+        
         nameLabel.text = "Name: \(person.name)"
         genderLabel.text = "Gender: \(person.gender)"
         birthYearLabel.text = "Birth Year: \(person.birthYear)"
