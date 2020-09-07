@@ -30,6 +30,8 @@ class SpeciesDetailViewController: UIViewController {
         
         if species.name == "Gungan" {
             self.imageView.image = UIImage(named: "Gungan.png")
+        } else if species.name == "Mon Calamari" {
+            self.imageView.image = UIImage(named: "monCalamari.png")
         }
         
         nameLabel.text = "Name: \(species.name)"
