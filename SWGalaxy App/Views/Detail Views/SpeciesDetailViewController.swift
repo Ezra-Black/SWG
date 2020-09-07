@@ -36,6 +36,8 @@ class SpeciesDetailViewController: UIViewController {
             self.imageView.image = UIImage(named: "Neimodian.png")
         } else if species.name == "Rodian" {
             self.imageView.image = UIImage(named: "Rodian.png")
+        } else if species.name == "Toydarian" {
+            self.imageView.image = UIImage(named: "Toydarian.png")
         }
         nameLabel.text = "Name: \(species.name)"
         homeworldLabel.text = "HomeWorld: \(species.homeworld)"
