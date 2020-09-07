@@ -51,6 +51,8 @@ class PersonDetailViewController: UIViewController {
             self.imageView.image = UIImage(named: "R2D2(red).png")
         } else if person.name == "R5-D4" {
             self.imageView.image = UIImage(named: "R5D4.png")
+        } else if person.name == "Yoda" {
+            self.imageView.image = UIImage(named: "Yoda.png")
         }
         
         
