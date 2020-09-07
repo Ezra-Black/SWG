@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F825BD42506E78300E3377E /* SWGalaxy_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F825BD32506E78300E3377E /* SWGalaxy_AppUITests.swift */; };
+		7F825BDE2506F30700E3377E /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F825BDD2506F30700E3377E /* NetworkDataLoader.swift */; };
+		7F825BDF2506F42000E3377E /* MockDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F825BDB2506F2E300E3377E /* MockDataLoader.swift */; };
+		7F825BE72506F4E400E3377E /* SWGalaxy_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F825BE62506F4E400E3377E /* SWGalaxy_AppTests.swift */; };
 		8335F66E23EF555D005F4249 /* PeopleTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335F66D23EF555D005F4249 /* PeopleTab.storyboard */; };
 		8335F67123EF5579005F4249 /* ShipsTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335F66F23EF5579005F4249 /* ShipsTab.storyboard */; };
 		8335F67323EF5587005F4249 /* SpeciesTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335F67223EF5587005F4249 /* SpeciesTab.storyboard */; };
@@ -40,7 +44,32 @@
 		83B45AC023D963CA002BFF42 /* PlanetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B45ABF23D963CA002BFF42 /* PlanetsController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7F825BD62506E78300E3377E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83B45A7B23D93075002BFF42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83B45A8223D93075002BFF42;
+			remoteInfo = "SWGalaxy App";
+		};
+		7F825BE92506F4E400E3377E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83B45A7B23D93075002BFF42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83B45A8223D93075002BFF42;
+			remoteInfo = "SWGalaxy App";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		7F825BD12506E78300E3377E /* SWGalaxy AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SWGalaxy AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F825BD32506E78300E3377E /* SWGalaxy_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWGalaxy_AppUITests.swift; sourceTree = "<group>"; };
+		7F825BD52506E78300E3377E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F825BDB2506F2E300E3377E /* MockDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataLoader.swift; sourceTree = "<group>"; };
+		7F825BDD2506F30700E3377E /* NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataLoader.swift; sourceTree = "<group>"; };
+		7F825BE42506F4E400E3377E /* SWGalaxy AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SWGalaxy AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F825BE62506F4E400E3377E /* SWGalaxy_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWGalaxy_AppTests.swift; sourceTree = "<group>"; };
+		7F825BE82506F4E400E3377E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8335F66D23EF555D005F4249 /* PeopleTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PeopleTab.storyboard; sourceTree = "<group>"; };
 		8335F67023EF5579005F4249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SWGalaxy App/Supporting Files/Base.lproj/ShipsTab.storyboard"; sourceTree = "<group>"; };
 		8335F67223EF5587005F4249 /* SpeciesTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpeciesTab.storyboard; sourceTree = "<group>"; };
@@ -77,6 +106,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7F825BCE2506E78300E3377E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F825BE12506F4E400E3377E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83B45A8023D93075002BFF42 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,6 +130,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F825BD22506E78300E3377E /* SWGalaxy AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7F825BD32506E78300E3377E /* SWGalaxy_AppUITests.swift */,
+				7F825BD52506E78300E3377E /* Info.plist */,
+			);
+			path = "SWGalaxy AppUITests";
+			sourceTree = "<group>";
+		};
+		7F825BE52506F4E400E3377E /* SWGalaxy AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F825BE62506F4E400E3377E /* SWGalaxy_AppTests.swift */,
+				7F825BE82506F4E400E3377E /* Info.plist */,
+			);
+			path = "SWGalaxy AppTests";
+			sourceTree = "<group>";
+		};
 		8335F67723EF55AA005F4249 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				83B45A8523D93075002BFF42 /* SWGalaxy App */,
+				7F825BD22506E78300E3377E /* SWGalaxy AppUITests */,
+				7F825BE52506F4E400E3377E /* SWGalaxy AppTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				83B45A8323D93075002BFF42 /* SWGalaxy App.app */,
+				7F825BD12506E78300E3377E /* SWGalaxy AppUITests.xctest */,
+				7F825BE42506F4E400E3377E /* SWGalaxy AppTests.xctest */,
 			);
 			name = Products;
 			path = ..;
@@ -193,6 +258,8 @@
 				83B45A8F23D93078002BFF42 /* Assets.xcassets */,
 				83B45A9123D93078002BFF42 /* LaunchScreen.storyboard */,
 				83B45AA223D948C1002BFF42 /* HTTPMethods.swift */,
+				7F825BDD2506F30700E3377E /* NetworkDataLoader.swift */,
+				7F825BDB2506F2E300E3377E /* MockDataLoader.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -218,6 +285,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7F825BD02506E78300E3377E /* SWGalaxy AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F825BDA2506E78300E3377E /* Build configuration list for PBXNativeTarget "SWGalaxy AppUITests" */;
+			buildPhases = (
+				7F825BCD2506E78300E3377E /* Sources */,
+				7F825BCE2506E78300E3377E /* Frameworks */,
+				7F825BCF2506E78300E3377E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F825BD72506E78300E3377E /* PBXTargetDependency */,
+			);
+			name = "SWGalaxy AppUITests";
+			productName = "SWGalaxy AppUITests";
+			productReference = 7F825BD12506E78300E3377E /* SWGalaxy AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7F825BE32506F4E400E3377E /* SWGalaxy AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F825BEB2506F4E400E3377E /* Build configuration list for PBXNativeTarget "SWGalaxy AppTests" */;
+			buildPhases = (
+				7F825BE02506F4E400E3377E /* Sources */,
+				7F825BE12506F4E400E3377E /* Frameworks */,
+				7F825BE22506F4E400E3377E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F825BEA2506F4E400E3377E /* PBXTargetDependency */,
+			);
+			name = "SWGalaxy AppTests";
+			productName = "SWGalaxy AppTests";
+			productReference = 7F825BE42506F4E400E3377E /* SWGalaxy AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		83B45A8223D93075002BFF42 /* SWGalaxy App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83B45A9723D93078002BFF42 /* Build configuration list for PBXNativeTarget "SWGalaxy App" */;
@@ -241,10 +344,18 @@
 		83B45A7B23D93075002BFF42 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Casanova Studios";
 				TargetAttributes = {
+					7F825BD02506E78300E3377E = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 83B45A8223D93075002BFF42;
+					};
+					7F825BE32506F4E400E3377E = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 83B45A8223D93075002BFF42;
+					};
 					83B45A8223D93075002BFF42 = {
 						CreatedOnToolsVersion = 11.3;
 					};
@@ -264,11 +375,27 @@
 			projectRoot = "";
 			targets = (
 				83B45A8223D93075002BFF42 /* SWGalaxy App */,
+				7F825BD02506E78300E3377E /* SWGalaxy AppUITests */,
+				7F825BE32506F4E400E3377E /* SWGalaxy AppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7F825BCF2506E78300E3377E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F825BE22506F4E400E3377E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83B45A8123D93075002BFF42 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,6 +413,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7F825BCD2506E78300E3377E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F825BD42506E78300E3377E /* SWGalaxy_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F825BE02506F4E400E3377E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F825BE72506F4E400E3377E /* SWGalaxy_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83B45A7F23D93075002BFF42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +439,7 @@
 				83B45A8723D93075002BFF42 /* AppDelegate.swift in Sources */,
 				83B45A9F23D947C5002BFF42 /* PersonController.swift in Sources */,
 				83B45AA923D952E4002BFF42 /* Species.swift in Sources */,
+				7F825BDF2506F42000E3377E /* MockDataLoader.swift in Sources */,
 				83B45AB023D96269002BFF42 /* StarShipsTableViewCell.swift in Sources */,
 				83B45AB223D96281002BFF42 /* PersonTableViewCell.swift in Sources */,
 				837E85B523DB993800490787 /* PersonDetailViewController.swift in Sources */,
@@ -305,6 +449,7 @@
 				83B45ABC23D96391002BFF42 /* PlanetsTableViewController.swift in Sources */,
 				837E85BB23DB995700490787 /* PlanetsDetailViewController.swift in Sources */,
 				83B45AB623D9629F002BFF42 /* PlanetsTableViewCell.swift in Sources */,
+				7F825BDE2506F30700E3377E /* NetworkDataLoader.swift in Sources */,
 				837E85B723DB994100490787 /* StarShipDetailViewController.swift in Sources */,
 				837E85B923DB994D00490787 /* SpeciesDetailViewController.swift in Sources */,
 				83B45A8923D93075002BFF42 /* SceneDelegate.swift in Sources */,
@@ -318,6 +463,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F825BD72506E78300E3377E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83B45A8223D93075002BFF42 /* SWGalaxy App */;
+			targetProxy = 7F825BD62506E78300E3377E /* PBXContainerItemProxy */;
+		};
+		7F825BEA2506F4E400E3377E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83B45A8223D93075002BFF42 /* SWGalaxy App */;
+			targetProxy = 7F825BE92506F4E400E3377E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8335F66F23EF5579005F4249 /* ShipsTab.storyboard */ = {
@@ -355,6 +513,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7F825BD82506E78300E3377E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HL3XLM68NV;
+				INFOPLIST_FILE = "SWGalaxy AppUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "CasanovaStudios.SWGalaxy-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SWGalaxy App";
+			};
+			name = Debug;
+		};
+		7F825BD92506E78300E3377E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HL3XLM68NV;
+				INFOPLIST_FILE = "SWGalaxy AppUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "CasanovaStudios.SWGalaxy-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SWGalaxy App";
+			};
+			name = Release;
+		};
+		7F825BEC2506F4E400E3377E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HL3XLM68NV;
+				INFOPLIST_FILE = "SWGalaxy AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "CasanovaStudios.SWGalaxy-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SWGalaxy App.app/SWGalaxy App";
+			};
+			name = Debug;
+		};
+		7F825BED2506F4E400E3377E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HL3XLM68NV;
+				INFOPLIST_FILE = "SWGalaxy AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "CasanovaStudios.SWGalaxy-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SWGalaxy App.app/SWGalaxy App";
+			};
+			name = Release;
+		};
 		83B45A9523D93078002BFF42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -508,6 +748,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7F825BDA2506E78300E3377E /* Build configuration list for PBXNativeTarget "SWGalaxy AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F825BD82506E78300E3377E /* Debug */,
+				7F825BD92506E78300E3377E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F825BEB2506F4E400E3377E /* Build configuration list for PBXNativeTarget "SWGalaxy AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F825BEC2506F4E400E3377E /* Debug */,
+				7F825BED2506F4E400E3377E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		83B45A7E23D93075002BFF42 /* Build configuration list for PBXProject "SWGalaxy App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

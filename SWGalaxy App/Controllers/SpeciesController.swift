@@ -10,6 +10,12 @@ import Foundation
 
 class SpeciesController {
     
+    var dataLoader: NetworkDataLoader
+    
+    init(dataLoader: NetworkDataLoader = URLSession.shared) {
+        self.dataLoader = dataLoader
+    }
+    
     //MARK: Properties
     
     var species: [Species] = []

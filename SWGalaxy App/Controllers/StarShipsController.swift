@@ -10,6 +10,12 @@ import Foundation
 
 class StarshipsController {
     
+    var dataLoader: NetworkDataLoader
+    
+    init(dataLoader: NetworkDataLoader = URLSession.shared) {
+        self.dataLoader = dataLoader
+    }
+    
     //MARK: Properties
     
     var starships: [Starship] = []
