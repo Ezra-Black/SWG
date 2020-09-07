@@ -10,6 +10,13 @@ import Foundation
 
 class PersonController {
     
+    var dataLoader: NetworkDataLoader
+      var searchResults: [Person] = []
+    
+    init(dataLoader: NetworkDataLoader = URLSession.shared) {
+        self.dataLoader = dataLoader
+    }
+    
     //MARK: Properties
     
     var people: [Person] = []
@@ -60,5 +67,7 @@ class PersonController {
             completion()
             print(data)
         }.resume()
+      
     }
+    
 }
