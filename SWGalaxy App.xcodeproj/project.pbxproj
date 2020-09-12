@@ -11,6 +11,8 @@
 		7F825BDE2506F30700E3377E /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F825BDD2506F30700E3377E /* NetworkDataLoader.swift */; };
 		7F825BDF2506F42000E3377E /* MockDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F825BDB2506F2E300E3377E /* MockDataLoader.swift */; };
 		7F825BE72506F4E400E3377E /* SWGalaxy_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F825BE62506F4E400E3377E /* SWGalaxy_AppTests.swift */; };
+		7F991C3F250C86C200518984 /* SKSpritNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F991C3E250C86C200518984 /* SKSpritNode+Utility.swift */; };
+		7F991C41250C871E00518984 /* CustomScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F991C40250C871E00518984 /* CustomScene.swift */; };
 		8335F66E23EF555D005F4249 /* PeopleTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335F66D23EF555D005F4249 /* PeopleTab.storyboard */; };
 		8335F67123EF5579005F4249 /* ShipsTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335F66F23EF5579005F4249 /* ShipsTab.storyboard */; };
 		8335F67323EF5587005F4249 /* SpeciesTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335F67223EF5587005F4249 /* SpeciesTab.storyboard */; };
@@ -70,6 +72,8 @@
 		7F825BE42506F4E400E3377E /* SWGalaxy AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SWGalaxy AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F825BE62506F4E400E3377E /* SWGalaxy_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWGalaxy_AppTests.swift; sourceTree = "<group>"; };
 		7F825BE82506F4E400E3377E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F991C3E250C86C200518984 /* SKSpritNode+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpritNode+Utility.swift"; sourceTree = "<group>"; };
+		7F991C40250C871E00518984 /* CustomScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScene.swift; sourceTree = "<group>"; };
 		8335F66D23EF555D005F4249 /* PeopleTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PeopleTab.storyboard; sourceTree = "<group>"; };
 		8335F67023EF5579005F4249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SWGalaxy App/Supporting Files/Base.lproj/ShipsTab.storyboard"; sourceTree = "<group>"; };
 		8335F67223EF5587005F4249 /* SpeciesTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpeciesTab.storyboard; sourceTree = "<group>"; };
@@ -260,6 +264,8 @@
 				83B45AA223D948C1002BFF42 /* HTTPMethods.swift */,
 				7F825BDD2506F30700E3377E /* NetworkDataLoader.swift */,
 				7F825BDB2506F2E300E3377E /* MockDataLoader.swift */,
+				7F991C3E250C86C200518984 /* SKSpritNode+Utility.swift */,
+				7F991C40250C871E00518984 /* CustomScene.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 				83B45A8723D93075002BFF42 /* AppDelegate.swift in Sources */,
 				83B45A9F23D947C5002BFF42 /* PersonController.swift in Sources */,
 				83B45AA923D952E4002BFF42 /* Species.swift in Sources */,
+				7F991C3F250C86C200518984 /* SKSpritNode+Utility.swift in Sources */,
 				7F825BDF2506F42000E3377E /* MockDataLoader.swift in Sources */,
 				83B45AB023D96269002BFF42 /* StarShipsTableViewCell.swift in Sources */,
 				83B45AB223D96281002BFF42 /* PersonTableViewCell.swift in Sources */,
@@ -457,6 +464,7 @@
 				83B45ABA23D9635C002BFF42 /* SpeciesTableViewController.swift in Sources */,
 				83B45ABE23D963BC002BFF42 /* SpeciesController.swift in Sources */,
 				83B45AA723D952D9002BFF42 /* Starships.swift in Sources */,
+				7F991C41250C871E00518984 /* CustomScene.swift in Sources */,
 				83B45AB423D96292002BFF42 /* SpeciesTableViewCell.swift in Sources */,
 				83B45AAB23D952EE002BFF42 /* Planets.swift in Sources */,
 			);
