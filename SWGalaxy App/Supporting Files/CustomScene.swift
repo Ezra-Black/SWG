@@ -18,6 +18,8 @@ class CustomScene: SKScene {
         addChild(node)
         node.loadTextures(named: "MonCalamari", forKey: SKSpriteNode.textureKey)
         node.position = CGPoint(x: frame.midX, y: frame.midY)
+        self.scaleMode = SKSceneScaleMode.aspectFill
+        
     }
     
     // Move to touch

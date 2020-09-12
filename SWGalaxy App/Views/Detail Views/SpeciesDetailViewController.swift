@@ -21,6 +21,8 @@ class SpeciesDetailViewController: UIViewController {
     
     var species: Species?
     private var skscene: CustomScene? = nil
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
@@ -31,8 +33,10 @@ class SpeciesDetailViewController: UIViewController {
            super.viewDidAppear(animated)
            skscene = CustomScene(size: view.bounds.size)
            skView.presentScene(skscene)
+//        skscene?.scaleMode = SKSceneScaleMode.resizeFill
        }
     
+ 
     private func updateViews() {
         guard let species = species else { return }
         
