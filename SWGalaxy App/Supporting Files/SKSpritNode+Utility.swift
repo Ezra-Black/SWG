@@ -10,7 +10,6 @@ import SpriteKit
 
 extension SKSpriteNode {
     static let textureKey = "Texture Key"
-    
     // Load textures for a sprite node and run that sequence forever
     func loadTextures(named name: String, forKey key: String) {
         // Load atlas
@@ -31,7 +30,7 @@ extension SKSpriteNode {
         self.removeAction(forKey: key)
 
         // Run texture sequence forever
-        let action = SKAction.animate(with: textures, timePerFrame: 0.03333)
+        let action = SKAction.animate(with: textures, timePerFrame: 1)
         let foreverAction = SKAction.repeatForever(action)
         self.run(foreverAction, withKey: key)
     }

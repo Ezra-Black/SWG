@@ -16,7 +16,7 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(node)
-        node.loadTextures(named: "Luke", forKey: SKSpriteNode.textureKey)
+        node.loadTextures(named: "MonCalamari", forKey: SKSpriteNode.textureKey)
         node.position = CGPoint(x: frame.midX, y: frame.midY)
     }
     
