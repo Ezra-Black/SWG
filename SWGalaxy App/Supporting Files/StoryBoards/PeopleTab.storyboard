@@ -41,14 +41,14 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PeopleCell" id="PCy-cB-QQt" customClass="PersonTableViewCell" customModule="SWGalaxy_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="61.5"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PCy-cB-QQt" id="zcb-gc-ccj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i58-Ck-7U4">
-                                            <rect key="frame" x="20" y="20" width="374" height="21.5"/>
+                                            <rect key="frame" x="20" y="20" width="374" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -152,6 +152,7 @@
                         <outlet property="heightLabel" destination="J7x-ff-8To" id="DwX-rT-lMD"/>
                         <outlet property="massLabel" destination="eva-C1-HC8" id="e9w-iE-MZ2"/>
                         <outlet property="nameLabel" destination="YqE-6C-o7L" id="Ejr-PU-8iA"/>
+                        <outlet property="skView" destination="kIr-Dz-zfq" id="XLj-Yf-F4f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mei-ag-RgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
