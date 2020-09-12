@@ -17,14 +17,21 @@ class SpeciesDetailViewController: UIViewController {
     @IBOutlet weak var homeworldLabel: UILabel!
     @IBOutlet weak var language: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var skView: SKView!
     
     var species: Species?
-
+    private var skscene: CustomScene? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewDidAppear(animated)
+           skscene = CustomScene(size: view.bounds.size)
+           skView.presentScene(skscene)
+       }
     
     private func updateViews() {
         guard let species = species else { return }
@@ -32,7 +39,7 @@ class SpeciesDetailViewController: UIViewController {
         if species.name == "Gungan" {
             self.imageView.image = UIImage(named: "Gungan.png")
         } else if species.name == "Mon Calamari" {
-            self.imageView.image = UIImage(named: "monCalamari.png")
+//            self.imageView.image = UIImage(named: "monCalamari.png")
         } else if species.name == "Neimodian" {
             self.imageView.image = UIImage(named: "Neimodian.png")
         } else if species.name == "Rodian" {

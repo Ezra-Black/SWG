@@ -22,7 +22,7 @@ class PersonDetailViewController: UIViewController {
     @IBOutlet weak var massLabel: UILabel!
     
     var person: Person?
-    var skscene: CustomScene? = nil
+    private var skscene: CustomScene? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
