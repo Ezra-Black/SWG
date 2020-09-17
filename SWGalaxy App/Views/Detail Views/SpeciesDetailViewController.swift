@@ -33,7 +33,10 @@ class SpeciesDetailViewController: UIViewController {
            super.viewDidAppear(animated)
            skscene = CustomScene(size: view.bounds.size)
            skView.presentScene(skscene)
-//        skscene?.scaleMode = SKSceneScaleMode.resizeFill
+        skscene?.scaleMode = SKSceneScaleMode.aspectFill
+        skscene?.backgroundColor = .clear
+        skView.allowsTransparency = true
+        
        }
     
  
