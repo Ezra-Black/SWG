@@ -7,15 +7,46 @@
 //
 
 import UIKit
+import Lottie
 
 class WelcomeViewController: UIViewController {
     
-    //Thank you so much for checking out the App! 
+    private var githubAnimationView: AnimationView?
+    //Thank you so much for checking out the App!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        addAnimation()
+      
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        addAnimation()
+    }
+    
+    private func addAnimation() {
+        githubAnimationView = .init(name: "19660-binary-code")
+          
+        githubAnimationView!.frame = view.frame
+          
+          // 3. Set animation content mode
+          
+        githubAnimationView!.contentMode = .scaleToFill
+          
+          // 4. Set animation loop mode
+          
+          githubAnimationView!.loopMode = .loop
+          
+          // 5. Adjust animation speed
+          
+          githubAnimationView!.animationSpeed = 0.5
+          
+          view.addSubview(githubAnimationView!)
+          
+          // 6. Play animation
+          
+          githubAnimationView!.play()
     }
     
 
